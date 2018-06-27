@@ -12,7 +12,8 @@ var app = {
         var contents = "";
         contents += "<div id='wrapper'>";
 			contents += "<h1>Contact Information</h1>";		        	                      
-        	contents += "<table>";				
+        	contents += "<form action=''>";				
+        	contents += "<table>";		
         		contents += "<tr>";
         			contents += "<td>First Name :</td>";
         			contents += "<td><input class='txtBox' id='fName' type='text' required></td>";
@@ -35,9 +36,11 @@ var app = {
         		contents += "</tr>";
         		contents += "<tr>";
         			contents += "<td></td>";
-        			contents += "<td><input id='btnAdd' type='submit' value='Add'><input id='btnUpdate' type='submit' value='Update' onclick='btnUpdate(event)'></td>";
+        			contents += "<td><input id='btnAdd' type='submit' value='Add'></td>";
         		contents += "</tr>";
         	contents += "</table>";
+        	contents += "</form>";
+        	contents += "<input id='btnUpdate' type='submit' value='Update' onclick='btnUpdate(event)'>";
         contents += "</div>";
         document.body.innerHTML = contents;        
         self.setEvents();
